@@ -1,0 +1,145 @@
+* {
+    * margin: 0;
+    * padding: 0;
+}
+
+
+#main {
+    position: relative;
+    height: 300px; 
+    width: 400px;
+    margin: 100px auto 0; 
+    right: 0;
+    left: 0;
+    border-radius: 50%;
+    background: #c0c0c0;
+}
+
+right[name="eye"], left[name="eye"] {
+    height: 50px; 
+    width: 50px;
+    background: black; 
+    position: absolute; 
+    top: 100px;
+    border-radius: 50%;
+}
+right[name="eye"] {
+    right: 100px; 
+}
+left[name="eye"] {
+    left: 100px; 
+}
+
+#inner-eye {
+    position: absolute;
+    height: 20px; 
+    width: 20px; 
+    left: 10px; 
+    top: 10px;
+    background: white;
+    border-radius: 50%;
+}
+
+.beard {
+    height: 5px; 
+    width: 80px; 
+    background: black; 
+    position: absolute; 
+}
+
+#r-1, #r-2, #r-3 {
+    left: 20px;
+}
+
+#l-1, #l-2, #l-3 {
+    right: 20px;
+}
+
+#r-1 {
+    top: 150px; 
+    transform: rotate(10deg);
+}
+
+#r-2, #l-2 {
+    top: 170px;
+}
+#r-3 {
+    top: 190px;
+    transform: rotate(-10deg);
+}
+
+#l-1 {
+    top: 150px; 
+    transform: rotate(-10deg);
+}
+#l-3 {
+    top: 190px; 
+    transform: rotate1(10deg);    
+}
+
+#nose {
+    height: 30px;
+    width: 30px;
+    background: black;
+    position: absolute;
+    margin: 0 auto; 
+    right: 0; 
+    left: 0;
+    top: 150px;
+    border-radius: 50%;
+}
+
+#mouth {
+    margin: 0 auto;
+    right: 0; 
+    left: 0; 
+    position: absolute; 
+    top: 140px;
+    font-size: 8rem;
+}
+
+right[name="ear"], left[name="ear"] {
+    position: absolute; 
+    background: #c0c0c0;
+    height: 100px; 
+    width: 100px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    top: 45px;
+}
+
+right[name="ear"] {
+    right: 40vw;
+    transform: rotate(20deg);
+}
+left[name="ear"] { 
+    left: 40vw;
+    transform: rotate(-20deg); 
+}
+
+
+@media screen and (max-width: 1300px) {
+    right[name="ear"] {
+        right: 37vw;
+    }
+    left[name="ear"] {
+        left: 37vw;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    right[name="ear"] {
+        right: 34vw;
+    }
+    left[name="ear"] {
+        left: 34vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    right[name="ear"] {
+        right: 30vw;
+    }
+    left[name="ear"] {
+        left: 30vw;
+    }
+}
