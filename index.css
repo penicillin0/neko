@@ -74,7 +74,7 @@ left[name="eye"] {
 }
 #l-3 {
     top: 190px; 
-    transform: rotate1(10deg);    
+    transform: rotate(10deg);    
 }
 
 #nose {
