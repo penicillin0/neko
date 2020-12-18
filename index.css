@@ -16,18 +16,57 @@
 }
 
 right[name="eye"], left[name="eye"] {
-    height: 50px; 
+    height: 50px;
     width: 50px;
     background: black; 
     position: absolute; 
     top: 100px;
     border-radius: 50%;
+    animation:pachi infinite;
+    animation-duration: 1s; 
 }
 right[name="eye"] {
     right: 100px; 
 }
 left[name="eye"] {
     left: 100px; 
+}
+
+@keyframes pachi{
+    from {
+        margin-top: 40px; 
+        border-radius: 0%; 
+        height: 10px; 
+    }
+}
+
+@keyframes inner-pachi {
+    0% {
+        background: none; 
+    }
+    40% {
+        background: none; 
+    }
+    50% {
+        background: white; 
+    }
+
+}
+@-webkit-keyframes pachi {
+    100% {
+        margin-top: 40px; 
+        border-radius: 0%; 
+        height: 10px; 
+
+    }
+}
+
+@-moz-keyframes pachi {
+    100% {
+        margin-top: 40px; 
+        border-radius: 0%; 
+        height: 10px; 
+    }
 }
 
 #inner-eye {
@@ -38,6 +77,8 @@ left[name="eye"] {
     top: 10px;
     background: white;
     border-radius: 50%;
+    animation: inner-pachi infinite;
+    animation-duration: 1s;  
 }
 
 .beard {
@@ -100,7 +141,6 @@ left[name="eye"] {
 
 right[name="ear"], left[name="ear"] {
     position: absolute; 
-    background: #c0c0c0;
     height: 100px; 
     width: 100px;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
@@ -114,6 +154,37 @@ right[name="ear"] {
 left[name="ear"] { 
     left: 40vw;
     transform: rotate(-20deg); 
+}
+
+.ear { 
+    background: #c3c3c3;
+}
+
+#nose:hover {
+    animation: hana 1s infinite;
+}
+
+.beard:hover {
+    animation: hige .1s infinite;
+}
+
+
+@keyframes hana {
+	0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+	15%  { transform: scale(0.9, 0.9) translate(0%, 5%); }
+	30%  { transform: scale(1.3, 0.8) translate(0%, 10%); }
+	50%  { transform: scale(0.8, 1.3) translate(0%, -10%); }
+	70%  { transform: scale(1.1, 0.9) translate(0%, 5%); }
+	100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+}
+
+@keyframes hige {
+    0% {
+        transform: translate(0px, 0px)
+    }
+    50% {
+        transform: translate(0px, 1px) rotateZ(3deg)
+    }
 }
 
 
